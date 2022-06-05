@@ -7,9 +7,9 @@ public class BonusServiceTest {
         BonusService service = new BonusService();
 
         // подготавливаем данные:
-        long amount = 1000;
+        long amount = 10000;
         boolean registered = true;
-        long expected = 30;
+        long expected = 300;
 
         // вызываем целевой метод:
         long actual = service.calculate(amount, registered);
@@ -56,8 +56,8 @@ public class BonusServiceTest {
 
         // подготавливаем данные:
         long amount = 10000;
-        boolean registered = true;
-        long expected = 300;
+        boolean registered = false;
+        long expected = 100;
 
         // вызываем целевой метод:
         long actual = service.calculate(amount, registered);
@@ -65,4 +65,5 @@ public class BonusServiceTest {
         // производим проверку (сравниваем ожидаемый и фактический):
         assertEquals(expected, actual);
     }
+
 }
